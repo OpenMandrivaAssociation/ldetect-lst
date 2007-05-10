@@ -1,5 +1,5 @@
 %define name ldetect-lst
-%define version 0.1.168
+%define version 0.1.169
 %define release %mkrel 1
 
 Name: %{name}
