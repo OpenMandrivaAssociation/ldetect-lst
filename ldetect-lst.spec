@@ -1,5 +1,5 @@
 %define name ldetect-lst
-%define version 0.1.172
+%define version 0.1.173
 %define release %mkrel 1
 
 Name: %{name}
@@ -14,6 +14,7 @@ License: GPL
 Requires(post): perl-base gzip
 Requires(preun): perl-base
 BuildRequires: perl-MDK-Common
+Conflicts: ldetect < 0.7.5
 Provides: hwdata
 # for XFdrake using nvidia97xx instead of nvidia, and nvidia71xx instead of NVIDIA_LEGACY:
 Conflicts: drakx-kbd-mouse-x11 < 0.7
