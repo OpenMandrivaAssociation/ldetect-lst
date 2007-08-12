@@ -1,5 +1,5 @@
 %define name ldetect-lst
-%define version 0.1.174
+%define version 0.1.175
 %define release %mkrel 1
 
 Name: %{name}
@@ -16,8 +16,8 @@ Requires(preun): perl-base
 BuildRequires: perl-MDK-Common
 Conflicts: ldetect < 0.7.5
 Provides: hwdata
-# for XFdrake using nvidia97xx instead of nvidia, and nvidia71xx instead of NVIDIA_LEGACY:
-Conflicts: drakx-kbd-mouse-x11 < 0.7
+# for XFdrake using nvidia-current instead of nvidia-97xx
+Conflicts: drakx-kbd-mouse-x11 < 0.21
 
 %package devel
 Summary: Devel for ldetect-lst
