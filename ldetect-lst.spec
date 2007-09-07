@@ -1,5 +1,5 @@
 %define name ldetect-lst
-%define version 0.1.181
+%define version 0.1.182
 %define release %mkrel 1
 
 Name: %{name}
@@ -59,7 +59,6 @@ fi
 %defattr(-,root,root)
 %doc AUTHORS 
 %{_datadir}/%{name}
-%{_sysconfdir}/modprobe.d/%{name}.conf
 %{_sbindir}/*
 
 %files devel
