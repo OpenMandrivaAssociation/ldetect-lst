@@ -15,6 +15,7 @@ Requires(post): perl-base gzip
 Requires(preun): perl-base
 BuildRequires: perl-MDK-Common
 Conflicts: ldetect < 0.7.18
+Conflicts: module-init-tools < 3.3-pre11.29mdv2008.0
 Provides: hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
 Conflicts: drakx-kbd-mouse-x11 < 0.21
