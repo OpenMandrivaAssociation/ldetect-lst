@@ -1,5 +1,5 @@
 %define name ldetect-lst
-%define version 0.1.185
+%define version 0.1.186
 %define release %mkrel 1
 
 Name: %{name}
@@ -39,7 +39,7 @@ see ldetect-lst
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall slibdir=$RPM_BUILD_ROOT/lib
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,6 +60,7 @@ fi
 %doc AUTHORS 
 %{_datadir}/%{name}
 %{_sbindir}/*
+/lib/module-init-tools/ldetect-lst-modules.alias
 
 %files devel
 %defattr(-,root,root)
