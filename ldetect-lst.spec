@@ -1,5 +1,5 @@
 %define name ldetect-lst
-%define version 0.1.209
+%define version 0.1.210
 %define release %mkrel 1
 
 Name: %{name}
@@ -7,7 +7,7 @@ Version: %{version}
 Release: %{release}
 Summary: Hardware list for the light detection library
 URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
-Source: %{name}-%{version}.tar.bz2
+Source: %{name}-%{version}.tar.lzma
 Group: System/Kernel and hardware
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPLv2+
