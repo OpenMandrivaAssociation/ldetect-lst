@@ -1,6 +1,6 @@
 %define name ldetect-lst
 %define version 0.1.211
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: %{name}
 Version: %{version}
@@ -14,6 +14,8 @@ License: GPLv2+
 Requires(post): perl-base gzip
 Requires(preun): perl-base
 BuildRequires: perl-MDK-Common
+# needed to create fallback-modules.alias
+BuildRequires: kernel-latest
 Conflicts: ldetect < 0.7.18
 Conflicts: module-init-tools < 3.3-pre11.29mdv2008.0
 Provides: hwdata
