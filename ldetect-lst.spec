@@ -16,6 +16,9 @@ Requires(preun): perl-base
 BuildRequires: perl-MDK-Common
 # needed to create fallback-modules.alias
 BuildRequires: kernel-latest
+BuildRequires: perl-MDK-Common
+# for list_modules.pm
+BuildRequires: drakxtools-backend >= 10.30
 Conflicts: ldetect < 0.7.18
 Conflicts: module-init-tools < 3.3-pre11.29mdv2008.0
 Provides: hwdata
