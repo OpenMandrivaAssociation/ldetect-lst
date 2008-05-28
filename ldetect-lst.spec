@@ -32,10 +32,11 @@ Requires: ldetect-lst = %{version}
 
 %description
 The hardware device lists provided by this package are used as lookup 
-table to get hardware autodetection
+table to get hardware autodetection.
 
 %description devel
-see ldetect-lst
+This package provides merge2pcitable, a tool that enables to merge in hardware
+databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 
 %prep
 %setup -q
