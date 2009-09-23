@@ -44,6 +44,9 @@ databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 %build
 %make
 
+%check
+make check
+
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall slibdir=$RPM_BUILD_ROOT/lib
