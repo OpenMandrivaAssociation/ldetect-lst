@@ -14,6 +14,8 @@ License: GPLv2+
 Requires(post): perl-base gzip
 Requires(preun): perl-base
 BuildRequires: perl-MDK-Common
+# for testsuite:
+BuildRequires: drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
 BuildRequires: kernel-latest
 BuildRequires: perl-MDK-Common
