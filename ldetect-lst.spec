@@ -7,7 +7,7 @@ Version: %{version}
 Release: %{release}
 Summary: Hardware list for the light detection library
 URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
-Source: %{name}-%{version}.tar.lzma
+Source: %{name}-%{version}.tar.xz
 Group: System/Kernel and hardware
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPLv2+
