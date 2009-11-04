@@ -18,7 +18,6 @@ BuildRequires: perl-MDK-Common
 BuildRequires: drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
 BuildRequires: kernel-latest
-BuildRequires: perl-MDK-Common
 # for list_modules.pm
 BuildRequires: drakxtools-backend >= 10.30
 Conflicts: ldetect < 0.7.18
