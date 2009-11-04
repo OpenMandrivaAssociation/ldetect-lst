@@ -2,6 +2,10 @@
 %define version 0.1.279
 %define release %mkrel 1
 
+%define bootstrap 0
+%{?_without_bootstrap: %global bootstrap 0}
+%{?_with_bootstrap: %global bootstrap 1}
+
 Name: %{name}
 Version: %{version}
 Release: %{release}
@@ -14,12 +18,14 @@ License: GPLv2+
 Requires(post): perl-base gzip
 Requires(preun): perl-base
 BuildRequires: perl-MDK-Common
+%if !%{bootstrap}
 # for testsuite:
 BuildRequires: drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
 BuildRequires: kernel-latest
 # for list_modules.pm
 BuildRequires: drakxtools-backend >= 10.30
+%endif
 Conflicts: ldetect < 0.7.18
 Conflicts: module-init-tools < 3.3-pre11.29mdv2008.0
 Provides: hwdata
@@ -43,10 +49,18 @@ databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 %setup -q
 
 %build
+%if %{bootstrap}
+pushd lst
+touch hardcoded-modules.alias fallback-modules.alias preferred-modules.alias
+popd
+%endif
+
 %make
 
 %check
+%if !%{bootstrap}
 make check
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
