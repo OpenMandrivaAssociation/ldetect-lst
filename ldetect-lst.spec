@@ -1,6 +1,6 @@
 %define name ldetect-lst
 %define version 0.1.279
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define bootstrap 0
 %{?_without_bootstrap: %global bootstrap 0}
@@ -12,6 +12,7 @@ Release: %{release}
 Summary: Hardware list for the light detection library
 URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
 Source: %{name}-%{version}.tar.lzma
+Patch0: %{name}-0.1.279-prism54.patch
 Group: System/Kernel and hardware
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPLv2+
@@ -47,6 +48,7 @@ databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 
 %prep
 %setup -q
+%patch0 -p1 -b .prism54
 
 %build
 %if %{bootstrap}
