@@ -1,6 +1,6 @@
 %define name ldetect-lst
-%define version 0.1.279
-%define release %mkrel 2
+%define version 0.1.280
+%define release %mkrel 1
 
 %define bootstrap 0
 %{?_without_bootstrap: %global bootstrap 0}
