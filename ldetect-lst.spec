@@ -1,5 +1,5 @@
 %define name ldetect-lst
-%define version 0.1.280
+%define version 0.1.281
 %define release %mkrel 1
 
 %define bootstrap 0
