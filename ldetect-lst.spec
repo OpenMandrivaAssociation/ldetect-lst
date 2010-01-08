@@ -1,5 +1,5 @@
 %define name ldetect-lst
-%define version 0.1.281
+%define version 0.1.282
 %define release %mkrel 1
 
 %define bootstrap 0
@@ -29,6 +29,10 @@ BuildRequires: drakxtools-backend >= 10.30
 %endif
 Conflicts: ldetect < 0.7.18
 Conflicts: module-init-tools < 3.3-pre11.29mdv2008.0
+Conflicts: usbutils < 0.86-2mdv
+Conflicts: pnputils < 0.1-6mdv
+Obsoletes: pciids <= pciids-0.7-1.20090922mdv2010.0
+Provides: pciids
 Provides: hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
 Conflicts: drakx-kbd-mouse-x11 < 0.21
@@ -85,6 +89,10 @@ fi
 %files
 %defattr(-,root,root)
 %doc AUTHORS 
+%{_datadir}/usb.ids
+%{_datadir}/oui.txt
+%{_datadir}/misc/pci.ids
+%{_datadir}/misc/pnp.ids
 %{_datadir}/%{name}
 %{_sbindir}/*
 /lib/module-init-tools/ldetect-lst-modules.alias
