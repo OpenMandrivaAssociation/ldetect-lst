@@ -1,51 +1,47 @@
-%define name ldetect-lst
-%define version 0.1.288
-%define release %mkrel 1
-
 %define bootstrap 0
 %{?_without_bootstrap: %global bootstrap 0}
 %{?_with_bootstrap: %global bootstrap 1}
 
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Summary: Hardware list for the light detection library
-URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
-Source: %{name}-%{version}.tar.lzma
-Group: System/Kernel and hardware
-BuildRoot: %{_tmppath}/%{name}-buildroot
-License: GPLv2+
-Requires(post): perl-base gzip
+Name:		ldetect-lst
+Version:	0.1.288
+Release:	%mkrel 1
+Summary:	Hardware list for the light detection library
+URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
+Source0:	%{name}-%{version}.tar.lzma
+Group:		System/Kernel and hardware
+BuildRoot:	%{_tmppath}/%{name}-buildroot
+License:	GPLv2+
+Requires(post):	perl-base gzip
 Requires(preun): perl-base
-BuildRequires: perl-MDK-Common
+BuildRequires:	perl-MDK-Common
 %if !%{bootstrap}
 # for testsuite:
-BuildRequires: drakx-kbd-mouse-x11
+BuildRequires:	drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
-BuildRequires: kernel-latest
+BuildRequires:	kernel-latest
 # for list_modules.pm
-BuildRequires: drakxtools-backend >= 10.30
+BuildRequires:	drakxtools-backend >= 10.30
 %endif
-Conflicts: ldetect < 0.7.18
-Conflicts: module-init-tools < 3.3-pre11.29mdv2008.0
-Conflicts: usbutils < 0.86-2mdv
-Conflicts: pnputils < 0.1-6mdv
-Obsoletes: pciids <= 1:0.7-1.20091201mdv2010.1
-Provides: pciids
-Provides: hwdata
+Conflicts:	ldetect < 0.7.18
+Conflicts:	module-init-tools < 3.3-pre11.29mdv2008.0
+Conflicts:	usbutils < 0.86-2mdv
+Conflicts:	pnputils < 0.1-6mdv
+Obsoletes:	pciids <= 1:0.7-1.20091201mdv2010.1
+Provides:	pciids
+Provides:	hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
-Conflicts: drakx-kbd-mouse-x11 < 0.21
+Conflicts:	drakx-kbd-mouse-x11 < 0.21
 
-%package devel
-Summary: Devel for ldetect-lst
-Group: Development/Perl
-Requires: ldetect-lst = %{version}
+%package	devel
+Summary:	Devel for ldetect-lst
+Group:		Development/Perl
+Requires:	ldetect-lst = %{version}
 
 %description
 The hardware device lists provided by this package are used as lookup 
 table to get hardware autodetection.
 
-%description devel
+%description	devel
 This package provides merge2pcitable, a tool that enables to merge in hardware
 databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 
