@@ -3,7 +3,7 @@
 %{?_with_bootstrap: %global bootstrap 1}
 
 Name:		ldetect-lst
-Version:	0.1.288
+Version:	0.1.289
 Release:	%mkrel 1
 Summary:	Hardware list for the light detection library
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
