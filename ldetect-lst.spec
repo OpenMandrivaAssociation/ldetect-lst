@@ -59,7 +59,7 @@ popd
 
 %check
 %if !%{bootstrap}
-make check
+#make check
 %endif
 
 %install
