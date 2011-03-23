@@ -4,7 +4,7 @@
 
 Name:		ldetect-lst
 Version:	0.1.291
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	Hardware list for the light detection library
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
 Source0:	%{name}-%{version}.tar.xz
@@ -69,16 +69,19 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-# trigger is needed to upgrade from a package having
-# /usr/share/ldetect-lst/pcitable in the package to the new scheme
-%triggerpostun -- %{name}
-if [ -x /usr/sbin/update-ldetect-lst ]; then
-  /usr/sbin/update-ldetect-lst
-fi
-
 %preun -p "/usr/sbin/update-ldetect-lst --clean"
 
 %post -p /usr/sbin/update-ldetect-lst
+
+# trigger is needed to upgrade from a package having
+# /usr/share/ldetect-lst/pcitable in the package to the new scheme
+# trigger* seems broken, use direct check for file instead
+%postun
+if [ -f /usr/share/ldetect-lst/pcitable ]; then
+    if [ -x /usr/sbin/update-ldetect-lst ]; then
+	/usr/sbin/update-ldetect-lst
+    fi
+fi
 
 %files
 %defattr(-,root,root)
