@@ -4,10 +4,14 @@
 
 Name:		ldetect-lst
 Version:	0.1.291
-Release:	%mkrel 3
+Release:	%mkrel 4
 Summary:	Hardware list for the light detection library
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
 Source0:	%{name}-%{version}.tar.xz
+Patch0:         ldetect-lst-0.1.291-add-gfx-intel-0126.patch
+Patch1:         ldetect-lst-add-support-for-qxl.diff
+Patch2:         ldetect-lst-disable-nvidia-legacy-96xx.patch
+Patch3:         ldetect-lst-prefer-amd74xx-for-nforce-mcp51-ide.patch
 Group:		System/Kernel and hardware
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 License:	GPLv2+
@@ -47,6 +51,10 @@ databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 %if %{bootstrap}
