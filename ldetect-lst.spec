@@ -2,17 +2,17 @@
 %{?_without_bootstrap: %global bootstrap 0}
 %{?_with_bootstrap: %global bootstrap 1}
 
-Name:		ldetect-lst
-Version:	0.1.292
-Release:	%mkrel 1
 Summary:	Hardware list for the light detection library
+Name:		ldetect-lst
+Version:	0.1.300
+Release:	%mkrel 1
+Group:		System/Kernel and hardware
+License:	GPLv2+
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
 Source0:	%{name}-%{version}.tar.xz
-Group:		System/Kernel and hardware
-BuildRoot:	%{_tmppath}/%{name}-buildroot
-License:	GPLv2+
-Requires(post):	perl-base gzip
-Requires(preun): perl-base
+Requires(post):	perl-base
+Requires(post):	gzip
+Requires(preun):	perl-base
 BuildRequires:	perl-MDK-Common
 %if !%{bootstrap}
 # for testsuite:
@@ -31,17 +31,18 @@ Provides:	pciids
 Provides:	hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
 Conflicts:	drakx-kbd-mouse-x11 < 0.21
-
-%package	devel
-Summary:	Devel for ldetect-lst
-Group:		Development/Perl
-Requires:	ldetect-lst = %{version}
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 The hardware device lists provided by this package are used as lookup 
 table to get hardware autodetection.
 
-%description	devel
+%package devel
+Summary:	Devel for ldetect-lst
+Group:		Development/Perl
+Requires:	ldetect-lst = %{version}-%{release}
+
+%description devel
 This package provides merge2pcitable, a tool that enables to merge in hardware
 databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 
@@ -85,7 +86,7 @@ fi
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS 
+%doc AUTHORS
 %{_datadir}/usb.ids
 %{_datadir}/oui.txt
 %{_datadir}/pci.ids
