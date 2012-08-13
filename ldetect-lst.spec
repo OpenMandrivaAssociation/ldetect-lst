@@ -29,6 +29,7 @@ Provides:	pciids
 Provides:	hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
 Conflicts:	drakx-kbd-mouse-x11 < 0.21
+BuildArch:	noarch
 
 %description
 The hardware device lists provided by this package are used as lookup 
