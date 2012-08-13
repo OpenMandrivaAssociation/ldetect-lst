@@ -4,8 +4,8 @@
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
-Version:	0.1.300
-Release:	%mkrel 1
+Version:	0.1.301
+Release:	1
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
