@@ -1,6 +1,4 @@
-%define bootstrap 0
-%{?_without_bootstrap: %global bootstrap 0}
-%{?_with_bootstrap: %global bootstrap 1}
+%bcond_with	bootstrap
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
@@ -12,9 +10,9 @@ URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
 Source0:	%{name}-%{version}.tar.xz
 Requires(post):	perl-base
 Requires(post):	gzip
-Requires(preun):	perl-base
+Requires(preun):perl-base
 BuildRequires:	perl-MDK-Common
-%if !%{bootstrap}
+%if !%{with bootstrap}
 # for testsuite:
 BuildRequires:	drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
@@ -31,18 +29,17 @@ Provides:	pciids
 Provides:	hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
 Conflicts:	drakx-kbd-mouse-x11 < 0.21
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 The hardware device lists provided by this package are used as lookup 
 table to get hardware autodetection.
 
-%package devel
+%package	devel
 Summary:	Devel for ldetect-lst
 Group:		Development/Perl
 Requires:	ldetect-lst = %{version}-%{release}
 
-%description devel
+%description	devel
 This package provides merge2pcitable, a tool that enables to merge in hardware
 databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 
@@ -50,7 +47,7 @@ databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 %setup -q
 
 %build
-%if %{bootstrap}
+%if %{with bootstrap}
 pushd lst
 touch hardcoded-modules.alias fallback-modules.alias preferred-modules.alias
 popd
@@ -59,16 +56,12 @@ popd
 %make
 
 %check
-%if !%{bootstrap}
+%if !%{with bootstrap}
 #make check
 %endif
 
 %install
-rm -rf %{buildroot}
 %makeinstall slibdir=%{buildroot}/lib
-
-%clean
-rm -rf %{buildroot}
 
 %preun -p "/usr/sbin/update-ldetect-lst --clean"
 
@@ -85,7 +78,6 @@ if [ -f /usr/share/ldetect-lst/pcitable ]; then
 fi
 
 %files
-%defattr(-,root,root)
 %doc AUTHORS
 %{_datadir}/usb.ids
 %{_datadir}/oui.txt
@@ -96,6 +88,5 @@ fi
 /lib/module-init-tools/ldetect-lst-modules.alias
 
 %files devel
-%defattr(-,root,root)
 %doc convert/README.pcitable
 %{_bindir}/*
