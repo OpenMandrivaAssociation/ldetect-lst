@@ -2,7 +2,7 @@
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
-Version:	0.1.302
+Version:	0.1.303
 Release:	1
 Group:		System/Kernel and hardware
 License:	GPLv2+
@@ -10,7 +10,7 @@ URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
 Source0:	%{name}-%{version}.tar.xz
 Requires(post):	perl-base
 Requires(post):	gzip
-Requires(preun):perl-base
+Requires(preun):	perl-base
 BuildRequires:	perl-MDK-Common
 %if !%{with bootstrap}
 # for testsuite:
@@ -35,12 +35,12 @@ BuildArch:	noarch
 The hardware device lists provided by this package are used as lookup 
 table to get hardware autodetection.
 
-%package	devel
+%package devel
 Summary:	Devel for ldetect-lst
 Group:		Development/Perl
 Requires:	ldetect-lst = %{version}-%{release}
 
-%description	devel
+%description devel
 This package provides merge2pcitable, a tool that enables to merge in hardware
 databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 
