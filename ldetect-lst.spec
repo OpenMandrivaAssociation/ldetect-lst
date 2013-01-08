@@ -6,7 +6,7 @@ Version:	0.1.316
 Release:	1
 Group:		System/Kernel and hardware
 License:	GPLv2+
-URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
+URL:		https://abf.rosalinux.ru/proyvind/ldetect-lst
 Source0:	%{name}-%{version}.tar.xz
 Requires(post):	perl-base
 Requires(post):	gzip
