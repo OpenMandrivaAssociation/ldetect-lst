@@ -135,22 +135,22 @@ fi
 - package should be noarch
 - cleanups
 - new version:
-  	o update ids from the proprietary nvidia-current-295.59
-  	o update AMD/ATI Cards+ entries from the proprietary and free driver
-  	  (HD 4000 and below are no longer supported by it, so the free driver
-  	  is now always used for those)
-  	o switch NVIDIA NVD9/GF119 cards from vesa to nouveau
-  	o add new AMD ids from the proprietary and free drivers
-  	o restructure AMD/ATI Cards+ entries for HD 2000 and newer
-  	  - separate those that support usermode modesetting
-  	  - add the necessary FIRMWARE and DRIVER_NO_FIRMWARE entries as per
-  	    mga bug #3466
-  	  - do not assign anything to the old unmaintained radeonhd driver
-  	o Monitor DB
-  	  - add Samsung SMS19A100
-  	o add another intel id from kernel-3.3.6
-  	o drop DKMS data about r8192se_pci & rt3090sta* (mga#5681)
-  	o use fbdev for "Poulsbo US15W(GMA500)" (mga#5633)
+	o update ids from the proprietary nvidia-current-295.59
+	o update AMD/ATI Cards+ entries from the proprietary and free driver
+	  (HD 4000 and below are no longer supported by it, so the free driver
+	  is now always used for those)
+	o switch NVIDIA NVD9/GF119 cards from vesa to nouveau
+	o add new AMD ids from the proprietary and free drivers
+	o restructure AMD/ATI Cards+ entries for HD 2000 and newer
+	  - separate those that support usermode modesetting
+	  - add the necessary FIRMWARE and DRIVER_NO_FIRMWARE entries as per
+	    mga bug #3466
+	  - do not assign anything to the old unmaintained radeonhd driver
+	o Monitor DB
+	  - add Samsung SMS19A100
+	o add another intel id from kernel-3.3.6
+	o drop DKMS data about r8192se_pci & rt3090sta* (mga#5681)
+	o use fbdev for "Poulsbo US15W(GMA500)" (mga#5633)
 
 * Sun May 27 2012 Tomasz Pawel Gajc <tpg@mandriva.org> 0.1.300-1
 + Revision: 800794
@@ -196,8 +196,8 @@ fi
 + Revision: 571141
 - cosmetics
 - new release, 0.1.288:
-  	o update to latest usb.ids
-  	o add product names for Samsung's 4G USB modems
+	o update to latest usb.ids
+	o add product names for Samsung's 4G USB modems
 
 * Fri Jun 11 2010 Anssi Hannula <anssi@mandriva.org> 0.1.287-1mdv2010.1
 + Revision: 547916
@@ -493,20 +493,20 @@ fi
 * Fri Jan 16 2009 Adam Williamson <awilliamson@mandriva.org> 0.1.251-1mdv2009.1
 + Revision: 330356
 - new release 0.1.251:
-  	+ re-work the blacklist	of cards that don't work with nv to be more
-  	  general and include more confirmed IDs
+	+ re-work the blacklist	of cards that don't work with nv to be more
+	  general and include more confirmed IDs
 
 * Mon Jan 12 2009 Adam Williamson <awilliamson@mandriva.org> 0.1.250-1mdv2009.1
 + Revision: 328480
 - new release 0.1.250:
-  	+ add NVIDIA GeForce 9400 GT into modified 7050 group (cards that don't
-  	  work with nv)
+	+ add NVIDIA GeForce 9400 GT into modified 7050 group (cards that don't
+	  work with nv)
 
 * Wed Dec 24 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.249-1mdv2009.1
 + Revision: 318194
 - new release 0.1.249:
-  	+ add new NVIDIA IDs from 180.18
-  	+ add new ATI IDs from 8.12
+	+ add new NVIDIA IDs from 180.18
+	+ add new ATI IDs from 8.12
 
 * Wed Dec 03 2008 Thierry Vignaud <tv@mandriva.org> 0.1.248-1mdv2009.1
 + Revision: 309718
@@ -527,15 +527,15 @@ fi
 * Sun Nov 30 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.245-1mdv2009.1
 + Revision: 308299
 - new version 0.1.245:
-  	+ NSC chips now use geode driver, nsc driver no longer builds
-  	+ drop the special case for VIA K8M800, works OK with openchrome now
-  	+ add new NVIDIA and ATI IDs from new driver versions
-  	+ add "Flat Panel 1600x900" (#45091)
-  	+ Monitor DB
-  		o sync monitor vendor names with Fedora
-  		o sync with Fedora
-  	+ use "i810" instead of "intel" driver on older i810 because it
-  	  segfaults when using XAA acceleration (#43916)
+	+ NSC chips now use geode driver, nsc driver no longer builds
+	+ drop the special case for VIA K8M800, works OK with openchrome now
+	+ add new NVIDIA and ATI IDs from new driver versions
+	+ add "Flat Panel 1600x900" (#45091)
+	+ Monitor DB
+		o sync monitor vendor names with Fedora
+		o sync with Fedora
+	+ use "i810" instead of "intel" driver on older i810 because it
+	  segfaults when using XAA acceleration (#43916)
 
 * Thu Nov 13 2008 Olivier Blin <blino@mandriva.org> 0.1.244-1mdv2009.1
 + Revision: 302767
@@ -553,12 +553,12 @@ fi
 * Wed Oct 01 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.242-1mdv2009.0
 + Revision: 290414
 - 0.1.242:
-  	+ drop separate Radeon HD 4xxx category: radeonhd supports these now
+	+ drop separate Radeon HD 4xxx category: radeonhd supports these now
 
 * Tue Sep 30 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.241-1mdv2009.0
 + Revision: 290258
 - new release 0.1.241:
-  	+ add ID 0605 for NVIDIA GeForce 9800 GT (reported and tested by Zoida A)
+	+ add ID 0605 for NVIDIA GeForce 9800 GT (reported and tested by Zoida A)
 
 * Thu Sep 25 2008 Thierry Vignaud <tv@mandriva.org> 0.1.240-1mdv2009.0
 + Revision: 288014
@@ -571,8 +571,8 @@ fi
 
   + Adam Williamson <awilliamson@mandriva.org>
     - new release 0.1.238:
-      	+ support Intel G41 graphics chips
-      	+ use vesa not nv for GeForce 7050 chips (#38391)
+	+ support Intel G41 graphics chips
+	+ use vesa not nv for GeForce 7050 chips (#38391)
 
 * Thu Sep 04 2008 Olivier Blin <blino@mandriva.org> 0.1.237-1mdv2009.0
 + Revision: 280833
@@ -589,48 +589,48 @@ fi
 * Fri Aug 29 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.235-1mdv2009.0
 + Revision: 277400
 - new release 0.1.235:
-  	+ support Logitech MX400 mouse
-  	+ no need to prefer madwifi over ath5k now, per #41988
+	+ support Logitech MX400 mouse
+	+ no need to prefer madwifi over ath5k now, per #41988
 
 * Thu Aug 21 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.234-1mdv2009.0
 + Revision: 274448
 - new release 0.1.234:
-  	+ NVIDIA: go back to 173 for FX and 177 for all later (177 going stable)
-  	+ NVIDIA: add some new IDs from 177 driver headers
-  	+ ATI: add some new IDs from Catalyst 8.8 driver headers
+	+ NVIDIA: go back to 173 for FX and 177 for all later (177 going stable)
+	+ NVIDIA: add some new IDs from 177 driver headers
+	+ ATI: add some new IDs from Catalyst 8.8 driver headers
 
 * Sun Aug 10 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.233-1mdv2009.0
 + Revision: 270583
 - new release 0.1.233:
-  	+ use new sisimedia driver for SiS 670/671 gfx cards (it actually works)
+	+ use new sisimedia driver for SiS 670/671 gfx cards (it actually works)
 
 * Wed Aug 06 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.232-1mdv2009.0
 + Revision: 264467
 - new release 0.1.232:
-  	+ use NVIDIA 177.x only for GTX 2xx series, 173.x for earlier cards
+	+ use NVIDIA 177.x only for GTX 2xx series, 173.x for earlier cards
 
 * Thu Jul 24 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.231-1mdv2009.0
 + Revision: 245945
 - new release 0.1.231:
-  	+ add two new monitors (Pixel and AdamW)
-  	+ add three new Intel video IDs (from xf86-video-intel-2.4.0) (AdamW)
+	+ add two new monitors (Pixel and AdamW)
+	+ add three new Intel video IDs (from xf86-video-intel-2.4.0) (AdamW)
 
 * Fri Jun 20 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.230-1mdv2009.0
 + Revision: 227580
 - new release 0.1.230:
-  	+ add new ATI IDs (r700 family), adjust categories as these are not
-          supported by radeonhd (or radeon) yet
+	+ add new ATI IDs (r700 family), adjust categories as these are not
+	  supported by radeonhd (or radeon) yet
 
 * Wed Jun 18 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.229-1mdv2009.0
 + Revision: 223996
 - new release 0.1.229:
-  	+ split Mach 64 and Rage 128 graphics cards up again as driver split upstream
+	+ split Mach 64 and Rage 128 graphics cards up again as driver split upstream
 
 * Wed Jun 18 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.228-1mdv2009.0
 + Revision: 223822
 - new release 0.1.228:
-  	+ add two new NVIDIA cards
-  	+ adjust NVIDIA card groups for upcoming driver branching
+	+ add two new NVIDIA cards
+	+ adjust NVIDIA card groups for upcoming driver branching
 
 * Sat May 31 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.227-1mdv2009.0
 + Revision: 213586
@@ -676,9 +676,9 @@ fi
 + Revision: 190206
 - refresh tarball - adjust HD 3200 again (actually, fglrx supports it but ati does not)
 - new release 0.218:
-  	+ add USB ID for Epson Expression 10000XL (salem)
-  	+ handle some more mice with back/forward buttons (adamw)
-  	+ some adjustments to driver mapping for a few ATI Radeons (adamw)
+	+ add USB ID for Epson Expression 10000XL (salem)
+	+ handle some more mice with back/forward buttons (adamw)
+	+ some adjustments to driver mapping for a few ATI Radeons (adamw)
 
 * Thu Mar 20 2008 Pixel <pixel@mandriva.com> 0.1.217-1mdv2008.1
 + Revision: 189161
@@ -727,13 +727,13 @@ fi
 * Tue Feb 05 2008 Pixel <pixel@mandriva.com> 0.1.209-1mdv2008.1
 + Revision: 162696
 - new release 0.1.209:
-  	+ add "Flat Panel 800x480" (used on belinea s.book) (#37486)
+	+ add "Flat Panel 800x480" (used on belinea s.book) (#37486)
 
 * Thu Jan 24 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.208-1mdv2008.1
 + Revision: 157674
 - new release 0.1.208:
-  	+ adjust Chrome9 driver mapping (#37032)
-  	+ add latest ATI IDs from upstream Windows driver
+	+ adjust Chrome9 driver mapping (#37032)
+	+ add latest ATI IDs from upstream Windows driver
 
 * Thu Jan 24 2008 Thierry Vignaud <tv@mandriva.org> 0.1.207-1mdv2008.1
 + Revision: 157589
@@ -742,7 +742,7 @@ fi
 * Wed Jan 02 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.206-1mdv2008.1
 + Revision: 140250
 - new release 0.1.206:
-  	+ blacklist ATI FireGL Mobility T2 from using proprietary driver as per report from Jan Ciger that it does not work
+	+ blacklist ATI FireGL Mobility T2 from using proprietary driver as per report from Jan Ciger that it does not work
 
 * Thu Dec 27 2007 Adam Williamson <awilliamson@mandriva.org> 0.1.205-1mdv2008.1
 + Revision: 138400
@@ -754,15 +754,15 @@ fi
 * Wed Dec 19 2007 Adam Williamson <awilliamson@mandriva.org> 0.1.204-1mdv2008.1
 + Revision: 133421
 - new release 0.1.204:
-  	+ add several new Intel graphics chip IDs from upstream driver source (adamw)
+	+ add several new Intel graphics chip IDs from upstream driver source (adamw)
 
 * Tue Dec 18 2007 Adam Williamson <awilliamson@mandriva.org> 0.1.203-1mdv2008.1
 + Revision: 132987
 - new release 0.1.203:
-  	+ add new NVIDIA IDs from upstream Windows driver (adamw)
-  	+ add new ATI IDs from upstream Windows driver (adamw)
-  	+ add new ATI IDs from upstream developer ID list (adamw)
-  	+ rename 'radeon 9500 to radeon x850' group to 'radeon 9500 to radeon x1050' (x1050 exists and is rebadged 9550/9600) (adamw)
+	+ add new NVIDIA IDs from upstream Windows driver (adamw)
+	+ add new ATI IDs from upstream Windows driver (adamw)
+	+ add new ATI IDs from upstream developer ID list (adamw)
+	+ rename 'radeon 9500 to radeon x850' group to 'radeon 9500 to radeon x1050' (x1050 exists and is rebadged 9550/9600) (adamw)
 
   + Thierry Vignaud <tv@mandriva.org>
     - kill re-definition of %%buildroot on Pixel's request
@@ -770,8 +770,8 @@ fi
 * Thu Nov 22 2007 Adam Williamson <awilliamson@mandriva.org> 0.1.202-1mdv2008.1
 + Revision: 111315
 - new release 0.1.202:
-  	+ add two new monitors (pixel)
-  	+ add new NVIDIA card definitions (from upstream Windows driver header) (adamw)
+	+ add two new monitors (pixel)
+	+ add new NVIDIA card definitions (from upstream Windows driver header) (adamw)
 
 * Tue Oct 30 2007 Adam Williamson <awilliamson@mandriva.org> 0.1.201-1mdv2008.1
 + Revision: 103658
@@ -780,10 +780,10 @@ fi
 * Wed Oct 17 2007 Adam Williamson <awilliamson@mandriva.org> 0.1.200-1mdv2008.1
 + Revision: 99491
 - 0.1.200 (anniversary release!)
-  	+ the ATI Brave New World. in the Brave New World, radeonhd works for all X1xxx and HD 2xxx cards, and fglrx-hd2000 works for all HD 2xxx cards. disclaimer: Brave New World may have minor, or indeed major, discrepancies from reality.
-  	+ lst/MonitorsDB: fix hsync range for 2405FPW
-  	+ lst/MonitorsDB: add ViewSonic G90fB
-  	+ do not prefer snd_usb_audio instead of some zc0301/uvcvideo/quickcam_messenger webcams
+	+ the ATI Brave New World. in the Brave New World, radeonhd works for all X1xxx and HD 2xxx cards, and fglrx-hd2000 works for all HD 2xxx cards. disclaimer: Brave New World may have minor, or indeed major, discrepancies from reality.
+	+ lst/MonitorsDB: fix hsync range for 2405FPW
+	+ lst/MonitorsDB: add ViewSonic G90fB
+	+ do not prefer snd_usb_audio instead of some zc0301/uvcvideo/quickcam_messenger webcams
 
 * Fri Oct 05 2007 Thierry Vignaud <tv@mandriva.org> 0.1.199-2mdv2008.0
 + Revision: 95557
@@ -1012,7 +1012,7 @@ fi
 - enable 3D on tdfx
 - fix FireGL3000 option for glint
 - kill a bogus entry for secondary output
-- merge  definitions
+- merge definitions
 - sanitize 3DFX, APM, Epson, i128, i740, IMS, madwifi, Matrox, Silicon
   Motion & Sun definitions
 - set fb for VIA CLE266 (disabled in openchrome source)
@@ -1789,7 +1789,7 @@ fi
 - lst/usbtable: merged kernel 2.6.8.1.10mdk entries to be able to
  list them during install.
 - lst/pcitable: o update ATI pciids (Nicolas)
-                o add new NVidia 6800 (Nicolas)
+		o add new NVidia 6800 (Nicolas)
 
 * Wed Sep 15 2004 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.1.16-6mdk
 - fix some CAPI entries (blino)
