@@ -2,8 +2,8 @@
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
-Version:	0.1.315
-Release:	2
+Version:	0.1.316
+Release:	1
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/ldetect-lst/trunk/
@@ -96,6 +96,11 @@ fi
 %{_bindir}/*
 
 %changelog
+* Tue Jan  7 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.1.316-1
+- (mostly) merge with upstream mandriva branch, switching to it
+  (PS: several commits has not been merged and should really be merged
+  from ROSA branch..)
+
 * Wed Nov 28 2012 akdengi <akdengi> 0.1.315-1
 - Version 0.1.315
 - Drop RIVA 128 cards due nv not supported anymore. Set it's like VESA
