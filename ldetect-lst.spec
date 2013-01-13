@@ -3,14 +3,12 @@
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
 Version:	0.1.316
-Release:	1
+Release:	2
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://abf.rosalinux.ru/proyvind/ldetect-lst
 Source0:	%{name}-%{version}.tar.xz
-Requires(post):	perl-base
 Requires(post):	gzip
-Requires(preun):perl-base
 BuildRequires:	perl-MDK-Common
 %if !%{with bootstrap}
 # for testsuite:
@@ -96,6 +94,9 @@ fi
 %{_bindir}/*
 
 %changelog
+* Sun Jan 13 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.1.316-2
+- drop no longer needed perl-base dependency
+
 * Tue Jan  7 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.1.316-1
 - (mostly) merge with upstream mandriva branch, switching to it
   (PS: several commits has not been merged and should really be merged
