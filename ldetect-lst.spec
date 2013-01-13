@@ -64,9 +64,11 @@ popd
 %install
 %makeinstall slibdir=%{buildroot}/lib
 
-%preun -p "/usr/sbin/update-ldetect-lst --clean"
+%preun
+/usr/sbin/update-ldetect-lst --clean
 
-%post -p /usr/sbin/update-ldetect-lst
+%post
+/usr/sbin/update-ldetect-lst
 
 # trigger is needed to upgrade from a package having
 # /usr/share/ldetect-lst/pcitable in the package to the new scheme
@@ -95,6 +97,7 @@ fi
 
 %changelog
 * Sun Jan 13 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.1.316-2
+- fix invalid-shell-in-%%post
 - drop no longer needed perl-base dependency
 
 * Tue Jan  7 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.1.316-1
