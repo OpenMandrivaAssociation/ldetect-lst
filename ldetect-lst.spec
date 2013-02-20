@@ -1,9 +1,9 @@
-%bcond_with	bootstrap
+%bcond_without	bootstrap
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
 Version:	0.1.316
-Release:	2
+Release:	3
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://abf.rosalinux.ru/proyvind/ldetect-lst
@@ -23,7 +23,7 @@ Conflicts:	module-init-tools < 3.3-pre11.29mdv2008.0
 Conflicts:	usbutils < 0.86-2mdv
 Conflicts:	pnputils < 0.1-6mdv
 Obsoletes:	pciids <= 1:0.7-1.20091201mdv2010.1
-Provides:	pciids
+Provides:	pciids = = 1:0.7-2.20091201mdv2010.1
 Provides:	hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
 Conflicts:	drakx-kbd-mouse-x11 < 0.21
@@ -33,7 +33,7 @@ BuildArch:	noarch
 The hardware device lists provided by this package are used as lookup 
 table to get hardware autodetection.
 
-%package	devel
+%package devel
 Summary:	Devel for ldetect-lst
 Group:		Development/Perl
 Requires:	ldetect-lst = %{version}-%{release}
