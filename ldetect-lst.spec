@@ -8,6 +8,7 @@ Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://abf.rosalinux.ru/proyvind/ldetect-lst
 Source0:	%{name}-%{version}.tar.xz
+Source1:	%{name}.rpmlintrc
 Requires(post):	gzip
 BuildRequires:	perl-MDK-Common
 %if !%{with bootstrap}
