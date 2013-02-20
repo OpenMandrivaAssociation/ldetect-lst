@@ -1,9 +1,9 @@
-%bcond_without	bootstrap
+%bcond_with bootstrap
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
 Version:	0.1.316
-Release:	3
+Release:	4
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://abf.rosalinux.ru/proyvind/ldetect-lst
