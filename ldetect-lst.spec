@@ -41,7 +41,7 @@ Requires:	ldetect-lst = %{version}-%{release}
 
 %description	devel
 This package provides merge2pcitable, a tool that enables to merge in hardware
-databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
+databases new entries packaged in eg /usr/share/ldetect-lst/pcitable.d.
 
 %prep
 %setup -q
