@@ -2,8 +2,8 @@
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
-Version:	0.1.316
-Release:	4
+Version:	0.1.317
+Release:	1
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://abf.rosalinux.ru/proyvind/ldetect-lst
@@ -39,7 +39,7 @@ Summary:	Devel for ldetect-lst
 Group:		Development/Perl
 Requires:	ldetect-lst = %{version}-%{release}
 
-%description	devel
+%description devel
 This package provides merge2pcitable, a tool that enables to merge in hardware
 databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
 
