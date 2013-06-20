@@ -46,8 +46,6 @@ databases new entries packaged in eg /usr/share/ldetect-lst/pcitable.d.
 %prep
 %setup -q
 
-%apply_patches
-
 %build
 %if %{with bootstrap}
 pushd lst
