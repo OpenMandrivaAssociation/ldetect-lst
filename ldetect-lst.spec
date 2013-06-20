@@ -34,7 +34,7 @@ BuildArch:	noarch
 The hardware device lists provided by this package are used as lookup 
 table to get hardware autodetection.
 
-%package devel
+%package	devel
 Summary:	Devel for ldetect-lst
 Group:		Development/Perl
 Requires:	ldetect-lst = %{version}-%{release}
