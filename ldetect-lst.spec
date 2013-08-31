@@ -15,7 +15,9 @@ BuildRequires:	perl-MDK-Common
 # for testsuite:
 BuildRequires:	drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
+%ifarch %{ix86} x86_64
 BuildRequires:	kernel-nrjQL-desktop
+%endif
 # for list_modules.pm
 BuildRequires:	drakxtools-backend >= 10.30
 %endif
