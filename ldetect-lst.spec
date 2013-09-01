@@ -18,6 +18,10 @@ BuildRequires:	drakx-kbd-mouse-x11
 %ifarch %{ix86} x86_64
 BuildRequires:	kernel-nrjQL-desktop
 %endif
+# check it in future
+%ifarch %arm
+BuildRequires:	kernel-kirkwood
+%endif
 # for list_modules.pm
 BuildRequires:	drakxtools-backend >= 10.30
 %endif
