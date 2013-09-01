@@ -20,7 +20,7 @@ BuildRequires:	kernel-nrjQL-desktop
 %endif
 # check it in future
 %ifarch %arm
-BuildRequires:	kernel-kirkwood
+BuildRequires:	kernel
 %endif
 # for list_modules.pm
 BuildRequires:	drakxtools-backend >= 10.30
