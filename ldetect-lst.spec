@@ -21,6 +21,7 @@ BuildRequires:	kernel-nrjQL-desktop
 # check it in future
 %ifarch %arm
 BuildRequires:	kernel
+BuildRequires:	kernel-versatile-latest
 %endif
 # for list_modules.pm
 BuildRequires:	drakxtools-backend >= 10.30
