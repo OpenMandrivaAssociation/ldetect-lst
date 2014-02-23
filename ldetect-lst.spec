@@ -2,11 +2,11 @@
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
-Version:	0.1.327.2
+Version:	0.1.327.3
 Release:	1
 Group:		System/Kernel and hardware
 License:	GPLv2+
-URL:		https://abf.rosalinux.ru/proyvind/ldetect-lst
+URL:		https://abf.rosalinux.ru/omv_software/ldetect-lst
 Source0:	%{name}-%{version}.tar.xz
 Source1:	%{name}.rpmlintrc
 Requires(post):	gzip
@@ -15,14 +15,8 @@ BuildRequires:	perl-MDK-Common
 # for testsuite:
 BuildRequires:	drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
-%ifarch %{ix86} x86_64
+#BuildRequires: kernel-desktop
 BuildRequires:	kernel-nrjQL-desktop
-%endif
-# check it in future
-%ifarch %arm
-BuildRequires:	kernel
-BuildRequires:	kernel-versatile-latest
-%endif
 # for list_modules.pm
 BuildRequires:	drakxtools-backend >= 10.30
 %endif
