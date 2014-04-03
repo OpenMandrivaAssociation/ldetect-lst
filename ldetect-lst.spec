@@ -3,7 +3,7 @@
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
 Version:	0.1.327.3
-Release:	2
+Release:	3
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://abf.rosalinux.ru/omv_software/ldetect-lst
@@ -67,7 +67,9 @@ popd
 %makeinstall slibdir=%{buildroot}/lib
 
 %preun
-/usr/sbin/update-ldetect-lst --clean
+if [ "$1" = 0 ]; then
+  /usr/sbin/update-ldetect-lst --clean
+fi
 
 %post
 /usr/sbin/update-ldetect-lst
