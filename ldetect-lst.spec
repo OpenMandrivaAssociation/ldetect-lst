@@ -16,7 +16,13 @@ BuildRequires:	perl-MDK-Common
 BuildRequires:	drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
 #BuildRequires: kernel-desktop
+%ifarch %{ix86} x86_64
 BuildRequires:	kernel-nrjQL-desktop
+%endif
+# arm kernels
+%ifarch %armx
+BuildRequires:	kernel
+%endif
 # for list_modules.pm
 BuildRequires:	drakxtools-backend >= 10.30
 %endif
