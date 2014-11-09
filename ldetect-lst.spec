@@ -3,7 +3,7 @@
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
 Version:	0.1.327.5
-Release:	4
+Release:	5
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://abf.rosalinux.ru/omv_software/ldetect-lst
@@ -31,6 +31,7 @@ Provides:	pciids = = 1:0.7-2.20091201mdv2010.1
 Provides:	hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
 Conflicts:	drakx-kbd-mouse-x11 < 0.21
+Requires(post,preun):	findutils
 BuildArch:	noarch
 
 %description
