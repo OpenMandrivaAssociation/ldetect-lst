@@ -17,8 +17,7 @@ BuildRequires:	perl-MDK-Common
 # for testsuite:
 BuildRequires:	drakx-kbd-mouse-x11
 # needed to create fallback-modules.alias
-#BuildRequires: kernel-desktop
-BuildRequires:	kernel-nrjQL-desktop
+BuildRequires:	kernel-nrjQL-desktop-latest
 # for list_modules.pm
 BuildRequires:	drakxtools-backend >= 10.30
 %endif
@@ -38,19 +37,17 @@ BuildArch:	noarch
 The hardware device lists provided by this package are used as lookup 
 table to get hardware autodetection.
 
-%package devel
+%package	devel
 Summary:	Devel for ldetect-lst
 Group:		Development/Perl
 Requires:	ldetect-lst = %{version}-%{release}
 
-%description devel
+%description	devel
 This package provides merge2pcitable, a tool that enables to merge in hardware
-databases new entries pacakged in eg /usr/share/ldetect-lst/pcitable.d.
+databases new entries packaged in eg /usr/share/ldetect-lst/pcitable.d.
 
 %prep
 %setup -q
-
-%apply_patches
 
 %build
 %if %{with bootstrap}
