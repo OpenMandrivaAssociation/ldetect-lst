@@ -2,11 +2,11 @@
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
-Version:	0.1.327.6
+Version:	0.1.338
 Release:	1
 Group:		System/Kernel and hardware
 License:	GPLv2+
-URL:		https://abf.rosalinux.ru/omv_software/ldetect-lst
+URL:		https://abf.io/software/ldetect-lst
 Source0:	%{name}-%{version}.tar.xz
 Source1:	%{name}.rpmlintrc
 Requires(post,postun,preun):	gzip-utils
