@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   ldetect-lst-0.1.327.6.tar.xz: a630a7413ba960247e8d8f552e39b4cac1de5597
+sources:
+  ldetect-lst-0.1.327.7.tar.xz: 266684898953bd7581f1d9f81872e2438c9271e8

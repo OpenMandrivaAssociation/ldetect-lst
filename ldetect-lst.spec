@@ -2,7 +2,7 @@
 
 Summary:	Hardware list for the light detection library
 Name:		ldetect-lst
-Version:	0.1.327.6
+Version:	0.1.327.7
 Release:	0.1
 Group:		System/Kernel and hardware
 License:	GPLv2+
