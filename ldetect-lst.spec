@@ -26,7 +26,7 @@ Conflicts:	module-init-tools < 3.3-pre11.29mdv2008.0
 Conflicts:	usbutils < 0.86-2mdv
 Conflicts:	pnputils < 0.1-6mdv
 Obsoletes:	pciids <= 1:0.7-1.20091201mdv2010.1
-Provides:	pciids = = 1:0.7-2.20091201mdv2010.1
+Provides:	pciids = 1:0.7-2.20091201mdv2010.1
 Provides:	hwdata
 # for XFdrake using nvidia-current instead of nvidia-97xx
 Conflicts:	drakx-kbd-mouse-x11 < 0.21
