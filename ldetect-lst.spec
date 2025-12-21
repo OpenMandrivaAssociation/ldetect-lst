@@ -12,6 +12,7 @@ Source1:	%{name}.rpmlintrc
 Requires(post,postun,preun):	gzip-utils
 Requires(post,postun,preun):	bash
 Requires(post,postun,preun):	rpm-helper
+BuildRequires:	make
 BuildRequires:	perl-MDK-Common
 %if !%{with bootstrap}
 # for testsuite:
